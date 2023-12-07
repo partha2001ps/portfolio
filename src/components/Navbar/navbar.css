@@ -83,14 +83,7 @@ div nav a:hover {
 #checkbox:checked + .toggle {
   transform: rotate(-90deg);
 }
-@media (min-width: 768px) {
-  #checkbox, .toggle, .bars {
-    display: none;
-  }
-  div nav ul {
-    display: flex !important; 
-  }
-}@media (min-width: 768px) {
+@media (min-width: 680px) {
   #checkbox, .toggle, .bars {
     display: none;
   }
@@ -100,6 +93,7 @@ div nav a:hover {
 }
 
 @media (max-width: 680px) {
+
   div ul {
     list-style: none;
     padding: 0;
@@ -108,15 +102,17 @@ div nav a:hover {
     justify-content: center;
     background-color: rgba(51, 51, 51, 0.8); 
     position: absolute;
-    top: 30%;
+    top: 60px; 
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     width: 100%;
     z-index: 1;
     transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-  }
+}
+
   div ul li {
-    padding: 15px;
+    margin: 0;
+    padding: 10px;
     text-align: center;
     width: 100%;
   }
