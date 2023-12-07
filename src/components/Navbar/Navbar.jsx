@@ -18,7 +18,7 @@ function Navbar() {
           <li><a href="#Projects">Projects</a></li>
           <li><a href="#Skills">Skills</a></li>
           <li><a href="#Education">Education</a></li>
-          <li><a href="#Content">Content</a></li>
+          <li><a href="#Content">Contact</a></li>
         </ul>
           <input id="checkbox" type="checkbox" checked={menu} onChange={handleMenu} />
           <label className="toggle" htmlFor="checkbox">
