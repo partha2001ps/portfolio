@@ -1,18 +1,4 @@
-@keyframes moveAnimation {
-    from {
-        transform: translateX(20px);
-    }
-    to {
-        transform: translateX(50px); /* Adjust the distance as needed */
-    }
-}
-
-.pro {
-    width: 500px;
-    border: none;
-    float: right;
-    border-radius: 100px;
-    border-color: rgba(254, 0, 0, 0.833);
-    background-color: black;
-    animation: moveAnimation 5s ease infinite; /* Adjust the duration and timing function as needed */
+img{
+    width: 100vw;
+    height: 100vh;
 }
