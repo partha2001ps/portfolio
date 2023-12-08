@@ -1,57 +1,60 @@
 .pro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(164, 172, 181);
-    padding: 20px;
-  }
-  
-  .profile-image {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-    border-radius: 50%;
-    height: 100%;
-  }
-  
- 
-/* YourComponent.css */
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(164, 172, 181);
+  padding: 20px;
+}
+.profile-image {
+  display: inline-block;
+  position: relative;
+  width: 38%;
+  border-radius: 50%;
+}
 @keyframes colorChange {
-    0% {
-      color: darkorchid;
-    }
-    25% {
-      color: rgb(255, 81, 0);
-    }
-    50% {
-      color: rgb(0, 89, 255);
-    }
-    75% {
-      color: crimson;
-    }
-    100% {
-      color: darkorchid;
-    }
+  0% {
+    color: rgb(255, 81, 0);
   }
-  
-  .name {
-    display: block;
-    font-size: xx-large;
-    animation: colorChange 2s infinite; 
+  50% {
+    color: rgb(0, 89, 255);
   }
-  
-  .greeting {
-    flex: 1;
-    margin-left: 20px;
+  100% {
+    color: darkorchid;
   }
-  
-  .developer-description,
-  .additional-content {
-   font-size: larger;
-   font-weight: 500;
-  }
-  
+}
+
+.name {
+  display: block;
+  font-size: 50px;
+  animation: colorChange 2s infinite;
+}
+
+.greeting {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 60px;
+  font-weight: bold;
+margin-bottom: 0;
+}
+.developer-description{
+  font-size: 40px;
+  margin-top: 0;
+  font-weight: 800;
+  margin-left: 15px;
+}
+.fsd {
+  background: linear-gradient(to right, #b02424, #f50606, #ff0000);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+ 
+}
+.additional-content{
+ font-size: larger;
+ font-weight: 500;
+ word-spacing: 12px;
+ text-indent: 40px;
+}
   @media only screen and (max-width: 768px) {
     .pro {
       flex-direction: column;
@@ -64,13 +67,19 @@
       margin-bottom: 20px;
       top: 0;
     }
-    .developer-description,
-    .additional-content {
-     font-size: medium;
-     font-weight: 300;
+    .name{
+      font-size: 30px;
     }
+    .developer-description {
+     font-size:25px;
+     font-weight: 800;
+    color:black;
+   margin-left: 0;
+    }
+    
     .greeting {
       margin-left: 0;
+      font-size: 35px;
     }
   }
   
