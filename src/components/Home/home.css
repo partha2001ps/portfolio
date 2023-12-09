@@ -74,10 +74,11 @@ margin-bottom: 0;
       width: 100%;
       max-width: 300px;
       margin-bottom: 20px;
-      top: 20px;
+      top: 25px;
     }
     .name{
       font-size: 30px;
+      margin-top: 10px;
     }
     .developer-description {
      font-size:25px;
@@ -90,6 +91,9 @@ margin-bottom: 0;
       margin-left: 0;
       font-size: 35px;
     }
+  button{
+    margin: 10px 10px 10px 0px;
+  }
   }
   #Content {
     display: flex;
