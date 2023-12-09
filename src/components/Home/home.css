@@ -4,6 +4,7 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
+  height: 100%;
 }
 .profile-container {
   display: flex;
@@ -80,7 +81,7 @@ margin-bottom: 0;
  word-spacing: 12px;
  text-indent: 40px;
 }
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 800px) {
     .pro {
       flex-direction: column;
       align-items: center;
