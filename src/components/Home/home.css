@@ -155,4 +155,49 @@ margin-bottom: 0;
     box-shadow: 4px 4px 12px #772222,
                -4px -4px 12px #8e1616;
   }
+  @media only screen and (min-width: 801px) {
+    .pro {
+      height: 100vh;
+    }
+  
+    .profile-container {
+      margin-top: 0;
+    }
+  
+    .left {
+      width: 60%;
+    }
+  
+    .right {
+      width: 40%;
+    }
+  
+    .profile-image {
+      top: 0;
+      margin-bottom: 20px;
+    }
+  
+    .name {
+      font-size: 50px;
+      margin-top: 0;
+    }
+  
+    .developer-description {
+      font-size: 40px;
+      font-weight: 800;
+      margin-left: 15px;
+    }
+  
+    .greeting {
+      font-size: 60px;
+    }
+  
+    .social {
+      margin-left: 20%;
+    }
+  
+    .profile-container {
+      margin-top: 0;
+    }
+  }
   
