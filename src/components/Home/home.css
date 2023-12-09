@@ -4,7 +4,7 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
-  height: 85.5vh;
+  height: 100vh;
 }
 .profile-container {
   display: flex;
@@ -29,7 +29,6 @@
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 100vh; 
 }
 
 .profile-image:hover {
@@ -99,14 +98,12 @@ margin-bottom: 0;
       width: 100%;
       max-width: 300px;
       margin-bottom: 50px;
-      top: 25px;
+      margin-top: 25px;
     }
     .social{
        margin-left: 10%;
     }
-    .profile-container{
-      margin-top: -200px;
-    }
+
     .name{
       font-size: 30px;
       margin-top: 10px;
