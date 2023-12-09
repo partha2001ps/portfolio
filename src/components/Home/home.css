@@ -2,15 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(164, 172, 181);
+  background-color: rgb(255, 255, 255);
   padding: 20px;
+  height: 85.5vh;
 }
 .profile-image {
   display: inline-block;
   position: relative;
-  width: 38%;
+  width: 25%;
   border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
 }
+.profile-image:hover {
+  transform: scale(1.1); 
+}
+
 @keyframes colorChange {
   0% {
     color: rgb(255, 81, 0);
@@ -28,7 +34,9 @@
   font-size: 50px;
   animation: colorChange 2s infinite;
 }
-
+.left{
+  width: 60%;
+}
 .greeting {
   flex: 1;
   margin-left: 20px;
@@ -47,7 +55,6 @@ margin-bottom: 0;
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
- 
 }
 .additional-content{
  font-size: larger;
@@ -55,17 +62,19 @@ margin-bottom: 0;
  word-spacing: 12px;
  text-indent: 40px;
 }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 800px) {
     .pro {
       flex-direction: column;
       align-items: center;
     }
-  
+   .left{
+    width: 100%;
+   }
     .profile-image {
       width: 100%;
       max-width: 300px;
       margin-bottom: 20px;
-      top: 0;
+      top: 20px;
     }
     .name{
       font-size: 30px;
@@ -81,5 +90,33 @@ margin-bottom: 0;
       margin-left: 0;
       font-size: 35px;
     }
+  }
+  #Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  button {
+    color: #090909;
+   margin-right: 40px;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #bd4747,
+               -6px -6px 12px #ee7979;
+  }
+  
+  button:hover {
+    border: 1px solid rgb(200, 54, 54);
+  }
+  
+  button:active {
+    box-shadow: 4px 4px 12px #772222,
+               -4px -4px 12px #8e1616;
   }
   
