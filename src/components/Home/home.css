@@ -1,18 +1,38 @@
 .pro {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
   height: 85.5vh;
 }
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+}
+
 .profile-image {
   display: inline-block;
-  position: relative;
-  width: 25%;
+  width: 60%;
   border-radius: 50%;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 50px;
 }
+.social {
+  margin-top: 10px; 
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100vh; 
+}
+
 .profile-image:hover {
   transform: scale(1.1); 
 }
@@ -66,15 +86,27 @@ margin-bottom: 0;
     .pro {
       flex-direction: column;
       align-items: center;
+      height: 100%;
     }
    .left{
     width: 100%;
    }
+   .right{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+   }
     .profile-image {
       width: 100%;
       max-width: 300px;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       top: 25px;
+    }
+    .social{
+       margin-left: 10%;
+    }
+    .profile-container{
+      margin-top: -200px;
     }
     .name{
       font-size: 30px;

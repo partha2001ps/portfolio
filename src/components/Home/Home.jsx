@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './home.css';
+import Social from '../social/Social';
 
 function Home() {
   const [text, setText] = useState("FULL STACK DEVELOPER (MERN)");
@@ -46,8 +47,16 @@ function Home() {
           <button onClick={scrollToContact}>Contact</button><button onClick={handleResumeClick}>View Resume</button>
         </section>
       </div>
-   <img className='profile-image' src="/image/photo.png" alt="profile-image" />
-      <div ref={contactRef}></div>
+      <div class='right'>
+  <div class='profile-container'>
+    <img class='profile-image' src="/image/photo.png" alt="profile-image" />
+    <div class='social'>
+      <Social />
+    </div>
+  </div>
+</div>
+ <div ref={contactRef}></div>
+   
     </section>
   );
 }
