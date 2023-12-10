@@ -47,10 +47,10 @@ function Home() {
           <button onClick={scrollToContact}>Contact</button><button onClick={handleResumeClick}>View Resume</button>
         </section>
       </div>
-      <div class='right'>
-  <div class='profile-container'>
-    <img class='profile-image' src="/image/photo.png" alt="profile-image" />
-    <div class='social'>
+      <div className='right'>
+  <div className='profile-container'>
+    <img className='profile-image' src="/image/photo.png" alt="profile-image" />
+    <div className='social'>
       <Social />
     </div>
   </div>

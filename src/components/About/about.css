@@ -1,0 +1,118 @@
+.partha {
+    text-align: center;
+    position: relative; 
+  }
+  .partha img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    position: relative;
+  }
+  
+  .shape {
+    position: absolute;
+    width: 70%;
+    max-height: 100px;
+    z-index: -1;
+    top: 10%;
+    animation: moveShape 5s ease-in-out infinite; 
+  }
+  
+  @keyframes moveShape {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+  
+    50% {
+      transform: translateY(-50px) scale(1.2);
+    }
+  }
+  
+
+  
+  
+
+  .right-img {
+    position: relative; 
+  }
+  .card1 {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .left-para {
+    flex: 1;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .about-content {
+    max-width: 500px; 
+    border: 4px solid rgb(255, 0, 0);
+    padding: 20px;
+    font-size: 20px;
+    text-indent: 20px;
+    display: flex;
+    position: relative;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .about-content p span {
+    font-size: 35px; 
+    font-weight: 900;
+    color: rgb(29, 160, 164);
+  }
+   .para{
+    z-index: 1;
+    color:black;
+   }
+  .about-content::before {
+    content: '';
+    position: absolute;
+    background-color: aliceblue;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 100%;
+    animation: rotBGimg 7s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .about-content::after {
+    content: '';
+    position: absolute;
+    background: aliceblue;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  .title {
+    font-size: 60px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 0, 195), rgb(11, 45, 237), rgb(0, 255, 255));
+    background-clip: text;
+    color: transparent;
+  }
+  @media screen and (max-width: 870px) {
+    .right-img {
+      display: none;
+    }
+    
+    .left-para {
+      margin: 0 auto; 
+      max-width: 500px;
+      margin: 40px;
+  }
+}

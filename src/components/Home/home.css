@@ -4,7 +4,6 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 20px;
-  height: 100%;
 }
 .profile-container {
   display: flex;
@@ -71,7 +70,7 @@ margin-bottom: 0;
 }
 .fsd {
   background: linear-gradient(to right, #b02424, #f50606, #ff0000);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   display: inline-block;
 }

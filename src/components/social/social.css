@@ -1,7 +1,8 @@
 .card {
-    display: flex;
+    display: flex ;
     height: 70px;
     width: 350px;
+    gap: 7px;
   }
 
   .card svg {
@@ -31,7 +32,8 @@
     font-size: 24px;
     text-decoration: none;
     transition: 0.25s;
-    border-radius: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(194, 194, 194);
   }
   
   .card svg {
