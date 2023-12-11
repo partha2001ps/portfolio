@@ -57,6 +57,7 @@
     position: relative;
     place-content: center;
     place-items: center;
+    text-align: justify;
     overflow: hidden;
     border-radius: 20px;
   }
@@ -108,8 +109,7 @@
   @media screen and (max-width: 870px) {
     .right-img {
       display: none;
-    }
-    
+    } 
     .left-para {
       margin: 0 auto; 
       max-width: 500px;
