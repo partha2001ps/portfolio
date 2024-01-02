@@ -42,7 +42,7 @@ function Education() {
       </div>
       <h1 className='title'id='cert'>Certefication</h1>
       <div className="education-container">
-    <div className='education-item'>
+    <div className='education-item mb-5 '>
         <h3 className='edu-title'>FULL STACK DEVELOPMENT (MERN)</h3>
         <p className='edu-school'>GUVI Chennai</p>
         <p className='edu-desc'>The Full Stack Development (MERN) course at GUVI Chennai provided comprehensive training in MongoDB, Express.js, React.js, and Node.js, covering both frontend and backend development. The curriculum included hands-on projects, real-world applications, and practical insights, preparing me for a career in full-stack web development.</p>

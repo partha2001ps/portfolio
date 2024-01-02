@@ -130,7 +130,7 @@ margin-bottom: 0;
     margin-top: 20px;
   }
   
-  button {
+  .b-css {
     color: #090909;
    margin-right: 40px;
     padding: 0.7em 1.7em;
@@ -143,13 +143,16 @@ margin-bottom: 0;
                -6px -6px 12px #ee7979;
   }
   
-  button:hover {
+.b-css:hover {
     border: 1px solid rgb(200, 54, 54);
   }
   
-  button:active {
+  .b-css:active {
     box-shadow: 4px 4px 12px #772222,
                -4px -4px 12px #8e1616;
   }
 
-  
+  .tag-a{
+    text-decoration: none;
+    color: #090909;
+  }

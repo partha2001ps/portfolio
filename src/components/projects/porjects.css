@@ -7,6 +7,7 @@
   margin-top: 5%;
   display: flex;
   flex-wrap: wrap;
+  justify-content:space-around;
   gap: 20px;
 }
 
@@ -63,12 +64,27 @@
 
 
 .img {
-  width: 300px;
+  width: 100%;
   border-radius: 8px;
   height: 200px;
   overflow-wrap: normal;
 }
 .project-desc{
+  margin-top: 15px;
   text-indent: 10px;
- height: 50px;
+}
+
+.custom-indicator {
+  background-color: rgb(88, 85, 85)!important;
+margin-bottom: -100px;
+}
+
+.custom-indicator.active {
+  background-color: black!important;
+}
+.carousel-control-prev{
+   height: 89%;
+}
+.carousel-control-next{
+  height: 89%;
 }

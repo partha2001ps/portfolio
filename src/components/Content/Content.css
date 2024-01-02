@@ -1,0 +1,9 @@
+.container-fluid{
+    background-color: rgb(200, 205, 209);
+     height: 100vh;
+}
+@media(max-width:768px){
+    .container-fluid{
+       height: auto;
+    }
+}
