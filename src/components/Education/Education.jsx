@@ -25,7 +25,10 @@ function Education() {
       "description": "Completed Secondary School Leaving Certificate (SSLC) with outstanding performance from Government High school Kamalapuram."
     }
   ];
-
+  const handlecerteficate = () => {
+    const certficate = 'https://drive.google.com/file/d/1PN4vp1KbbuyYWwY859s60ETpWnuTvMIS/view'
+    window.open(certficate,'_blank')
+}
   return (
     <section id='Education'>
        <h1 className='title'>Education</h1>
@@ -45,7 +48,11 @@ function Education() {
     <div className='education-item mb-5 '>
         <h3 className='edu-title'>FULL STACK DEVELOPMENT (MERN)</h3>
         <p className='edu-school'>GUVI Chennai</p>
-        <p className='edu-desc'>The Full Stack Development (MERN) course at GUVI Chennai provided comprehensive training in MongoDB, Express.js, React.js, and Node.js, covering both frontend and backend development. The curriculum included hands-on projects, real-world applications, and practical insights, preparing me for a career in full-stack web development.</p>
+          <p className='edu-desc'>The Full Stack Development (MERN) course at GUVI Chennai provided comprehensive training in MongoDB, Express.js, React.js, and Node.js, covering both frontend and backend development. </p>
+          <div className="d-flex justify-content-center align-items-center">
+  <button className='btn btn-outline-primary' onClick={handlecerteficate}>View Certificate</button>
+</div>
+
     </div>
 </div>
 
