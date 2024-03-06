@@ -78,7 +78,11 @@ function Content() {
           <div>
             <h2 className='text-danger m-2 text-center'>Get In Touch Me</h2>
           </div>
-          <Social />
+          <div className=' d-flex  flex-column  '>
+            <div className=' mx-auto m-2'>
+            <Social />
+         </div>
+      </div>
         </form>
       </div>
     </section>

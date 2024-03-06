@@ -11,20 +11,20 @@ function Projects() {
       "liveDemo": "https://candid-pudding-d739b9.netlify.app/"
     },
     {
-      "title": "URL Shortener",
-      "description": "URL Shortener simplifies sharing lengthy URLs effortlessly, offering analytics for link performance.",
-      "toolsUsed": ["Express", "MongoDB", "Node.js,React.js"],
-      "image": "https://i.postimg.cc/jSZRLr3r/Screenshot-2023-12-30-103112.png",
-      "sourceCode": "https://github.com/partha2001ps/url_short_fe",
-      "liveDemo": "https://main--lively-crumble-bcfe7b.netlify.app/"
-    },
-    {
       "title": "Login Authentication",
       "description": " Secure login authentication using JSON Web Tokens and password reset to  email sent",
       "toolsUsed": ["Json Token", "React", "Node.js","Nodemiler"],
       "image": "https://i.postimg.cc/cL0kFcmW/Screenshot-2023-12-31-095559.png",
       "sourceCode": "https://github.com/partha2001ps/router/tree/password",
       "liveDemo": "https://password--jolly-naiad-eb7ff4.netlify.app/"
+    },
+    {
+      "title": "CRUD App with Axios",
+      "description": "A React application implementing CRUD operations with Axios.read,write,delete and update",
+      "toolsUsed": ["React", "Axios"],
+      "image": "https://i.postimg.cc/LXqKTVVD/Screenshot-2023-12-31-101257.png",
+      "sourceCode": "https://github.com/partha2001ps/React-axio",
+      "liveDemo": "https://glistening-figolla-e580d4.netlify.app/"
     },
     {
       "title": "Rest Countries Weather",
@@ -82,14 +82,6 @@ function Projects() {
       "image": "https://i.postimg.cc/FR63LhPz/Screenshot-2023-12-30-103642.png",
       "sourceCode": "https://github.com/partha2001ps/tasks/tree/main/TASK9",
       "liveDemo": "https://glistening-elf-6ba9ab.netlify.app/task9/input"
-    },
-    {
-      "title": "CRUD App with Axios",
-      "description": "A React application implementing CRUD operations with Axios.read,write,delete and update",
-      "toolsUsed": ["React", "Axios"],
-      "image": "https://i.postimg.cc/LXqKTVVD/Screenshot-2023-12-31-101257.png",
-      "sourceCode": "https://github.com/partha2001ps/React-axio",
-      "liveDemo": "https://glistening-figolla-e580d4.netlify.app/"
     },
     {
       "title": "Hall Booking (Backend)",

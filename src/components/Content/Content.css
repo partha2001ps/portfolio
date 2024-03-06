@@ -2,7 +2,7 @@
     background-color: rgb(200, 205, 209);
      height: 100vh;
 }
-@media(max-width:900px){
+@media(max-width:992px){
     .container-fluid{
        height: auto;
     }
