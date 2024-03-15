@@ -4,19 +4,35 @@ function Projects() {
   const projects = [
     {
       "title": "Zen Class Clone",
-      "description": "Zen Class Clone is a web application designed to facilitate Zen class queries and tasks for a serene learning experience.",
+      "description": "Zen Class Clone is a web application designed to facilitate Zen class queries and tasks for a serene learning experience for students & montor application.",
       "toolsUsed": ["React", "MongoDB", "Node.js"],
       "image": "https://i.postimg.cc/W4hXgM81/Screenshot-2023-12-29-155328.png",
       "sourceCode": "https://github.com/partha2001ps/zendesk-frontend",
       "liveDemo": "https://candid-pudding-d739b9.netlify.app/"
     },
     {
-      "title": "Login Authentication",
-      "description": " Secure login authentication using JSON Web Tokens and password reset to  email sent",
-      "toolsUsed": ["Json Token", "React", "Node.js","Nodemiler"],
-      "image": "https://i.postimg.cc/cL0kFcmW/Screenshot-2023-12-31-095559.png",
-      "sourceCode": "https://github.com/partha2001ps/router/tree/password",
-      "liveDemo": "https://password--jolly-naiad-eb7ff4.netlify.app/"
+      "title": "Chat Application",
+      "description": "Chat Application is an interactive messaging platform, utilizing Socket.IO for real-time communication nd efficient conversations among users.",
+      "toolsUsed": ["socket Io", "React", "Node.js"],
+      "image": "https://i.postimg.cc/g2S4MdGV/Screenshot-2024-03-13-204240.png",
+      "sourceCode": "https://github.com/partha2001ps/chatApp-FE",
+      "liveDemo": "https://chatapplicationca.netlify.app/"
+    },
+    {
+      "title": "CRM",
+      "description": "CRM is a customer relationship management system designed to streamline interactions with customers.",
+      "toolsUsed": ["Json Token", "React", "Node.js","Nodemiler","Authorization"],
+      "image": "https://i.postimg.cc/NFcz8PWp/Screenshot-2024-03-09-175722.png",
+      "sourceCode": "https://github.com/partha2001ps/CRM-Frontend",
+      "liveDemo": "https://customers-crm.netlify.app/"
+    },
+    {
+      "title": "My Notes App",
+      "description": "My Notes App is  managing personal notes effectively. With features for creating, editing, and deleting notes available ",
+      "toolsUsed": ["React", "Node.js","Authorization"],
+      "image": "https://i.postimg.cc/rwKwrCs8/Screenshot-2024-03-15-171636.png",
+      "sourceCode": "https://github.com/partha2001ps/myToDo",
+      "liveDemo": "https://notes-app-ps.netlify.app"
     },
     {
       "title": "CRUD App with Axios",
@@ -49,14 +65,6 @@ function Projects() {
       "image": "https://i.postimg.cc/Cxn56jLv/Screenshot-2023-12-30-104120.png",
       "sourceCode": "https://github.com/partha2001ps/tasks/tree/main/TASK12/weather",
       "liveDemo": "https://glistening-elf-6ba9ab.netlify.app/task12/weather/"
-    },
-    {
-      "title": "My Todo App",
-      "description": " Managing tasks efficiently with a personalized to-do with status,delete and edit option available",
-      "toolsUsed": ["React", "use state"],
-      "image": "https://i.postimg.cc/k5nrtmZx/Screenshot-2023-12-31-100227.png",
-      "sourceCode": "https://github.com/partha2001ps/myToDo",
-      "liveDemo": "https://gilded-dusk-6156ee.netlify.app/"
     },
     {
       "title": "Blogs Platform",
