@@ -4,7 +4,7 @@
 }
 
 .projects-container {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around;
@@ -88,4 +88,26 @@ margin-bottom: -100px;
 }
 .carousel-control-next{
   height: 89%;
+}
+@media (max-width: 400px) {
+  .filter-buttons button {
+    margin-top: 2px; 
+    font-size: 0.8rem; 
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 335px) {
+  .filter-buttons button {
+    margin-top: 2px; 
+    font-size: 0.7rem; 
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media(max-width:600px){
+  .projects-container{
+    margin-top: 5%;
+  }
+
 }

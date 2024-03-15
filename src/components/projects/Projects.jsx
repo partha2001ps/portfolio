@@ -3,6 +3,7 @@ import './porjects.css'
 function Projects() {
   const projects = [
     {
+      "type": "full",
       "title": "Zen Class Clone",
       "description": "Zen Class Clone is a web application designed to facilitate Zen class queries and tasks for a serene learning experience for students & montor application.",
       "toolsUsed": ["React", "MongoDB", "Node.js"],
@@ -11,6 +12,7 @@ function Projects() {
       "liveDemo": "https://candid-pudding-d739b9.netlify.app/"
     },
     {
+      "type": "full",
       "title": "Chat Application",
       "description": "Chat Application is an interactive messaging platform, utilizing Socket.IO for real-time communication nd efficient conversations among users.",
       "toolsUsed": ["socket Io", "React", "Node.js"],
@@ -19,6 +21,7 @@ function Projects() {
       "liveDemo": "https://chatapplicationca.netlify.app/"
     },
     {
+      "type": "full",
       "title": "CRM",
       "description": "CRM is a customer relationship management system designed to streamline interactions with customers.",
       "toolsUsed": ["Json Token", "React", "Node.js","Nodemiler","Authorization"],
@@ -27,6 +30,7 @@ function Projects() {
       "liveDemo": "https://customers-crm.netlify.app/"
     },
     {
+      "type": "full",
       "title": "My Notes App",
       "description": "My Notes App is  managing personal notes effectively. With features for creating, editing, and deleting notes available ",
       "toolsUsed": ["React", "Node.js","Authorization"],
@@ -35,6 +39,7 @@ function Projects() {
       "liveDemo": "https://notes-app-ps.netlify.app"
     },
     {
+      "type": "mini",
       "title": "CRUD App with Axios",
       "description": "A React application implementing CRUD operations with Axios.read,write,delete and update",
       "toolsUsed": ["React", "Axios"],
@@ -43,6 +48,7 @@ function Projects() {
       "liveDemo": "https://glistening-figolla-e580d4.netlify.app/"
     },
     {
+      "type": "mini",
       "title": "Rest Countries Weather",
       "description": "Displaying weather information for different countries with flag and capital.",
       "toolsUsed": ["javascript", "REST Countries API"],
@@ -51,6 +57,7 @@ function Projects() {
       "liveDemo": "https://quiet-dodol-c12728.netlify.app/task11/"
     },
     {
+      "type": "mini",
       "title": "Dictionary App",
       "description": "Create a Dictionary that allows to search for words, providing on their part of speech verb and noun.",
       "toolsUsed": ["javascript", "Merriam-Webster API"],
@@ -67,6 +74,7 @@ function Projects() {
       "liveDemo": "https://glistening-elf-6ba9ab.netlify.app/task12/weather/"
     },
     {
+      "type": "mini",
       "title": "Blogs Platform",
       "description": " A blog platform created with React and Router for seamless navigation to Zen class some blogs to my web site...",
       "toolsUsed": ["React js","Router"],
@@ -75,6 +83,7 @@ function Projects() {
       "liveDemo": "https://ubiquitous-muffin-1f3c47.netlify.app/"
     },
     {
+      "type": "mini",
       "title": "Price Card Generator",
       "description": "A simple utility for generating price cards with total price and quanity using React",
       "toolsUsed": ["Use state", "CSS", "React"],
@@ -84,6 +93,7 @@ function Projects() {
     },
     
     {
+      "type": "mini",
       "title": "Calculator App",
       "description": "A basic calculator application using DOM manipulation in JavaScript.Normal Math function..",
       "toolsUsed": ["DOM", "JavaScript"],
@@ -92,6 +102,7 @@ function Projects() {
       "liveDemo": "https://glistening-elf-6ba9ab.netlify.app/task9/input"
     },
     {
+      "type": "mini",
       "title": "Hall Booking (Backend)",
       "description": "Backend system for a hall booking application built with Node.js, Express, and MongoDB.",
       "toolsUsed": ["Node.js", "Express", "MongoDB"],
@@ -100,32 +111,26 @@ function Projects() {
       "liveDemo": "https://hallbooking-vpzx.onrender.com/"
     }
   ];
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [filterType, setFilterType] = useState(null);
+
   const itemsPerSlide = {
     lg: 4,
     md: 2,
     sm: 1
   };
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   const handleCarouselClick = (index) => {
     setActiveIndex(index);
   };
 
-  const chunkProjects = projects.reduce((chunks, project, index) => {
-    const largeDevice = Math.floor(index / itemsPerSlide.lg);
-    const mediumDevice = Math.floor(index / itemsPerSlide.md);
-    const smallDevice = Math.floor(index / itemsPerSlide.sm);
+  const handleFilter = (type) => {
+    setFilterType(type);
+  };
 
-    let chunkIndex;
-    if (windowWidth < 576) {
-      chunkIndex = smallDevice;
-    } else if (windowWidth < 992) {
-      chunkIndex = mediumDevice;
-    } else {
-      chunkIndex = largeDevice;
-    }
+  const chunkProjects = projects.reduce((chunks, project, index) => {
+    const chunkIndex = Math.floor(index / itemsPerSlide.lg);
 
     if (!chunks[chunkIndex]) {
       chunks[chunkIndex] = [];
@@ -147,12 +152,46 @@ function Projects() {
     };
   }, []);
 
+  const filteredProjects = filterType ? projects.filter(project => project.type === filterType) : projects;
+
+  const chunkFilteredProjects = filteredProjects.reduce((chunks, project, index) => {
+    const largeDevice = Math.floor(index / itemsPerSlide.lg);
+    const mediumDevice = Math.floor(index / itemsPerSlide.md);
+    const smallDevice = Math.floor(index / itemsPerSlide.sm);
+  
+    let chunkIndex;
+    if (windowWidth < 576) {
+      chunkIndex = smallDevice;
+    } else if (windowWidth < 992) {
+      chunkIndex = mediumDevice;
+    } else {
+      chunkIndex = largeDevice;
+    }
+  
+    if (!chunks[chunkIndex]) {
+      chunks[chunkIndex] = [];
+    }
+  
+    chunks[chunkIndex].push(project);
+  
+    return chunks;
+  }, []);
+  
+
   return (
     <section id='Projects'>
       <h1 className='title'>Projects</h1>
+      <div className="d-flex justify-content-center">
+        <div className="filter-buttons mt-2 mt-sm-1 ">
+          <button className='btn btn-outline-primary  mx-2 mt-4 mt-sm-1' onClick={() => handleFilter(null)}>All</button>
+          <button className='btn btn-outline-primary mx-2 mt-4 mt-sm-1' onClick={() => handleFilter('full')}>Full Stack Projects</button>
+          <button className='btn btn-outline-primary   mx-2 mt-4 mt-sm-1' onClick={() => handleFilter('mini')}>Mini Projects</button>
+        </div>
+      </div>
+
       <div id="carouselExampleIndicators" className="carousel slide">
         <div className="carousel-indicators">
-          {Array.from({ length: chunkProjects.length }).map((_, index) => (
+          {Array.from({ length:chunkFilteredProjects.length }).map((_, index) => (
             <button
               key={index}
               type="button"
@@ -165,7 +204,7 @@ function Projects() {
           ))}
         </div>
         <div className="carousel-inner">
-          {chunkProjects.map((chunk, chunkIndex) => (
+          {chunkFilteredProjects.map((chunk, chunkIndex) => (
             <div key={chunkIndex} className={`carousel-item ${chunkIndex === activeIndex ? "active" : ""}`}>
               <div className="projects-container">
                 {chunk.map((project, index) => (
@@ -194,22 +233,23 @@ function Projects() {
             data-bs-slide="prev"
           >
             <span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
-           </span>
-           
+              <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+            </span>
           </button>
           <button
             className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next"
-            
           >
-          <span ><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+            </span>
           </button>
         </div>
       </div>
     </section>
   );
 }
+
 export default Projects;
